@@ -1,6 +1,6 @@
 <head>
-   
-  
+    <title> 
+    
     <style>
         .container {
             position: relative;
@@ -18,29 +18,45 @@
              color: white;
              padding: 10px 20px;
          }   
-         .magenta {
-             background-color: red;
-             color: white;
-             padding: 10px 20px;
-         }
          .blue {
              background-color: blue;
              color: white;
              padding: 10px 20px;
          }
+         .moving-image {
+             transition: transform 0.5s ease;
+         }
+
+         .moving-image-red {
+             transition: transform 0.5s ease;
+         }
+         .moving-image-red:hover {
+             transform: translateY(-20px);
+             background-color: red;
+             color: white;
+             padding: 10px 20px;/* Moves up */
+         .moving-image:hover {
+             transform: translateY(-20px);
+             background-color: magenta;
+             color: white;
+             padding: 10px 20px;/* Moves up */
+         }   
         
     </style>
 </head>
 <div class="container">
-    <img src="loho.jpg" class="corner-image" alt="Corner Image">
+    <img src="loho.png" class="corner-image" alt="Corner Image">
     <h1>The Taafeite (formely the G4UPG) is a section that has a life</h1>
 </div>
 <div>
     <a href="catches.html" target="_self" class="red" title="This will only access the contributors, not the entire section">Catchphrases</a> 
-    <a href="games.html" target="_self" class="magenta" title="Our released games(made by LittleLixia)" download>Games</a>
-    <a href="conts.html" target="_self" class="magenta" title="The contributors who did all for us">Contributors</a>
-    <a href="secrets.html" target="_self" class="blue" title="Our secrets :)">Our Secrets</a>
+    <a href="games.html" target="_self" class="moving-image-red" title="Our released games(made by LittleLixia)">Games</a>
+    <a href="conts.html" target="_self" class="moving-image-red" title="The contributors who did all for us">Contributors</a>
+    <a href="secrets.html" target="_self" class="moving-image" title="Our secrets :)">Our Secrets</a>
 </div>
+
+
+
 
 
 
