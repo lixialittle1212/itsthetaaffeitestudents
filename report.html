@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Report site</title>
+<body>
+
+    <!-- The Input Form -->
+    <form onsubmit="handleReport(event)">
+        <label for="reportInput">Enter your report:</label>
+        <input type="text" id="reportInput" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- The Paragraph to update -->
+    <p id="messageDisplay"></p>
+
+    <script>
+        function handleReport(event) {
+            // 1. Prevent page reload
+            event.preventDefault();
+
+            // 2. Get the input value (optional, if you need to use it)
+            var userInput = document.getElementById("reportInput").value;
+
+            // 3. Select the <p> tag and change its text
+            document.getElementById("messageDisplay").innerText = "Thanks for making a report";
+            
+            // Optional: Clear the input field
+            document.getElementById("reportInput").value = "";
+        }
+    </script>
+
+</body>
+</html>   
